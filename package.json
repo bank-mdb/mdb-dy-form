@@ -12,7 +12,8 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "element-ui": "^2.12.0",
+    "vue": "^2.6.11"
   },
   "keywords": [
     "front-end",
@@ -37,7 +38,7 @@
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "vuepress": "^1.2.0",
-    "webpack": "^3.6.0",
+    "webpack": "^4.39.3",
     "webpack-dev-server": "^2.9.1"
   }
 }
