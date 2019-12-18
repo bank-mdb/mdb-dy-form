@@ -1,7 +1,8 @@
-# vue-dy-form 使用教程
+---
+home: false
+---
 
+### 欢迎来到 UI 组件库模板工程
 
-# <span v-for="i in 3">{{i}}</span>
-
-
-<hello></hello>
+![An image](./assets/lalala.gif)<br>
+<code>没什么好说的，就是一个 UI 组件库模板工程～</code>
