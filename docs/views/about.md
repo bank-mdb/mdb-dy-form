@@ -27,10 +27,10 @@
 |formItemClass|表单form-item的class|String|-|
 |props.formItemClass|表单form-item的class|String|-|
 |style|同render函数的style|String|-|
-|attrs|同render函数的attrs|String|-|
-|domProps|同render函数的domProps|String|-|
-|directives|同render函数的directives|String|-|
+|attrs|同render函数的attrs|Object|-|
+|domProps|同render函数的domProps|Object|-|
+|directives|同render函数的directives|Array|-|
 |slot|同render函数的slot|String|-|
-|on|同render函数的on|String|-|
+|on|同render函数的on|Object|-|
 |rules|表单校验规则|Array|-|
 
