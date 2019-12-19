@@ -35,7 +35,6 @@ export default [
       type: "el-select",
       label: "性别",
       prop: "sex",
-      span: 12,
       props: {
         placeholder: "请选择性别",
         clearable: true,
@@ -71,7 +70,6 @@ export default [
       type: "el-date-picker",
       label: "出生日期",
       prop: "birthday",
-      span: 12,
       props: {
         placeholder: "请选择出生日期",
         clearable: true,

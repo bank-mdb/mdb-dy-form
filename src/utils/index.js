@@ -1,32 +1,32 @@
-export function createChildrenElements (h, children, instance) {
-  if (!children) return
+export function createChildrenElements(h, children, instance) {
+  if (!children) return;
 
-  let objType = Object.prototype.toString.call(children)
-  if (objType === '[object String]') {
-    return children
-  } else if (objType === '[object Array]' && children.length === 0) {
-    return
+  let objType = Object.prototype.toString.call(children);
+  if (objType === "[object String]") {
+    return children;
+  } else if (objType === "[object Array]" && children.length === 0) {
+    return;
   }
   return children.map(child => {
-    if (Object.prototype.toString.call(child) === '[object String]') {
-      return child
+    if (Object.prototype.toString.call(child) === "[object String]") {
+      return child;
     }
 
     if (!child.prop || !!child.slot) {
-      return renderItemType(h, child, instance)
+      return renderItemType(h, child, instance);
     }
-    return renderFormItemType(h, child, instance)
-  })
+    return renderFormItemType(h, child, instance);
+  });
 }
 
-export function renderItemType (h, option, instance) {
+export function renderItemType(h, option, instance) {
   return h(
     option.type,
     {
       model: {
-        value: option.prop ? instance.fatherForm.model[option.prop] : '',
+        value: option.prop ? instance.fatherForm.model[option.prop] : "",
         callback: newVal => {
-          if (option.prop) instance.fatherForm.model[option.prop] = newVal
+          if (option.prop) instance.fatherForm.model[option.prop] = newVal;
         }
       },
       props: {
@@ -46,14 +46,14 @@ export function renderItemType (h, option, instance) {
       ref: option.ref
     },
     createChildrenElements(h, option.children, instance)
-  )
+  );
 }
 
-export function renderFormItemType (h, option, instance) {
+export function renderFormItemType(h, option, instance) {
   let typeCLass = `${(option.props && option.props.inputClass) ||
-    ''} ${option.class || ''} ${option.inputClass || ''}`
+    ""} ${option.class || ""} ${option.inputClass || ""}`;
   return h(
-    'el-form-item',
+    "el-form-item",
     {
       props: {
         label: option.label || (option.props && option.props.label),
@@ -68,9 +68,9 @@ export function renderFormItemType (h, option, instance) {
         option.type,
         {
           model: {
-            value: option.prop ? instance.fatherForm.model[option.prop] : '',
+            value: option.prop ? instance.fatherForm.model[option.prop] : "",
             callback: newVal => {
-              if (option.prop) instance.fatherForm.model[option.prop] = newVal
+              if (option.prop) instance.fatherForm.model[option.prop] = newVal;
             }
           },
           props: {
@@ -95,5 +95,5 @@ export function renderFormItemType (h, option, instance) {
         createChildrenElements(h, option.children, instance)
       )
     ]
-  )
+  );
 }

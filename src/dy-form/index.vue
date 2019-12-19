@@ -32,13 +32,14 @@
               formItem.children.length > 0
           "
           :options="formItem"
+          v-bind="$attrs"
+          v-on="$listeners"
         ></dynamic-multi-items>
         <dynamic-col
           v-else
           :options="formItem"
           v-bind="$attrs"
           v-on="$listeners"
-          v-model="model[formItem.prop]"
         ></dynamic-col>
       </div>
     </el-row>
