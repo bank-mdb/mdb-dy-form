@@ -21,6 +21,7 @@
 |prop|表单绑定属性名称|String|-|
 |span|占位列宽(不能大于24)|Number|24|
 |props|type组件props中定义的属性|Object|-|
+|children|嵌套的组件或内容|Array,String|-|
 |class|同render函数的class|String|-|
 |inputClass|type组件的class|String|-|
 |props.inputClass|type组件的class|String|-|
